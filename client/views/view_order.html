@@ -1,0 +1,25 @@
+<!--Test-->
+<div class="panel panel-default" ng-init="getOrders()">
+  <div ng-repeat="order in orders | limitTo : -3">
+  <div class="panel-heading">
+    <h3 class="panel-title">To Be Ordered</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <!--div ng-repeat="order in orders"-->
+    		<div class="col-md-6">
+    			<div class="col-md-6">
+    				<p>{{order.bread}}</p>
+    				<p>{{order.deli}}</p>
+            <p>{{order.cheese}}</p>
+            <p>{{order.drink}}</p>
+            <p>{{order.quantity}}</p>
+            <p>{{order._id}}</p>
+    			</div>
+    			<div class="col-md-6">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

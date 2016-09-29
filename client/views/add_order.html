@@ -1,0 +1,65 @@
+<!--Order a Sandwich-->
+    <div class="container">
+    	<div class="row"> <!--ng-init="getOrders()"-->
+        <!--div ng-repeat="order in orders"-->
+          <form ng-submit="addOrder()">
+            <div class="col-xs-2">
+              <div class="form-group">
+                <label>Bread</label>
+                <select ng-model="order.bread" class="form-control">
+                  <option selected>Choose One</option>
+                  <option value="Roll">Roll</option>
+                  <option value="Sub">Sub</option>
+                  <option value="Crossiant">Crossiant</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group">
+                <label>Deli</label>
+                <select ng-model="order.deli" class="form-control">
+                  <option selected>Choose One</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Roast Beef">Roast Beef</option>
+                  <option value="Salami">Salami</option>
+                </select>
+              </div>
+            </div>
+    				<div class="col-xs-2">
+              <div class="form-group">
+    					  <label>Cheese</label>
+    					  <select ng-model="order.cheese" class="form-control">
+      						<option selected>Choose One</option>
+      						<option value="Cheddar">Cheddar</option>
+      						<option value="Provolone">Provolone</option>
+      						<option value="Swiss">Swiss</option>
+    					  </select>
+    				  </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group">
+    					  <label>Drink</label>
+    					  <select ng-model="order.drink" class="form-control">
+      						<option selected>Choose One</option>
+      						<option value="Coke">Coke</option>
+      						<option value="Sprite">Sprite</option>
+      						<option value="Dr. Pepper">Dr. Pepper</option>
+    					  </select>
+    				  </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group">
+                <label>Quantity</label>
+                <input ng-model="order.quantity" class="form-control" type="text" value="Quantity">
+        			</div>
+      					<input type="submit" class="btn btn-info" value="Add" ng-click="counter(1)" ng-disabled="limit(4)">
+                <p>{{count}}</p>
+                <a class="btn btn-primary" href="#/yourOrder">View Details</a>
+                  <!--a href="#/order/edit/:id">Edit Order</a-->
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
