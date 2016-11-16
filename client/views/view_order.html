@@ -1,23 +1,26 @@
 <!--Test-->
 <div class="panel panel-default" ng-init="getOrders()">
+
   <div ng-repeat="order in orders | limitTo : -3">
+    <w3-test-directive></w3-test-directive>
+    <h3>{{totalPrice()}}</h3>
   <div class="panel-heading">
     <h3 class="panel-title">To Be Ordered</h3>
   </div>
   <div class="panel-body">
     <div class="row">
       <!--div ng-repeat="order in orders"-->
-    		<div class="col-md-6">
-    			<div class="col-md-6">
+    		<div class="col-sm-4">
+    			<!--div class="col-md-6"-->
     				<p>{{order.bread}}</p>
     				<p>{{order.deli}}</p>
             <p>{{order.cheese}}</p>
             <p>{{order.drink}}</p>
             <p>{{order.quantity}}</p>
             <p>{{order._id}}</p>
+            <a href="#/edit/{{order._id}}">Edit</a> | <a href="#" ng-click="removeOrder(order._id)">Delete</a>
     			</div>
-    			<div class="col-md-6">
-    			</div>
+          <!--div class="pull-right"-->
     		</div>
     	</div>
     </div>

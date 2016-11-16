@@ -13,7 +13,7 @@ theStore.config(function($routeProvider){
 		controller:'OrderController',
 		templateUrl: 'views/view_order.html'
 	})
-	.when('/orders/edit/:id',{
+	.when('/edit/:id',{
 		controller:'OrderController',
 		templateUrl: 'views/edit_order.html'
 	})

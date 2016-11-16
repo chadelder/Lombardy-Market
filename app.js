@@ -29,6 +29,17 @@ app.get('/api/orders', function(req, res) {
   });
 });
 
+/*// Get quantities
+app.get('/api/orders', function(req, res) {
+  Order.totalPrice(function(err, orders) {
+    if(err) {
+      throw err;
+    }
+    //console.log(orders)
+    res.json(orders);
+  });
+});*/
+
 //Get Order(s) by Id
 app.get('/api/orders/:_id', function(req, res){
 	Order.getOrderById(req.params._id, function(err, order){

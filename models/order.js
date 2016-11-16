@@ -37,6 +37,11 @@ module.exports.getOrders = function(callback, limit){
 Order.find(callback).limit(limit);
 }
 
+/*// Get quantity
+module.exports.totalPrice = function(callback, limit){
+  Order.find(callback).limit(limit);
+}*/
+
 // Get Order by Id
 module.exports.getOrderById = function(id, callback){
 	Order.findById(id, callback);
